@@ -67,8 +67,21 @@ new Swiper('.promotion .swiper-container',{
     el: '.promotion .swiper-pagination', //페이지 번호 요소 선택자
     clickable : true, //사용자의 페이지 번호 요소 제어
   },
-  navigation:{
-    prevEl: 'promotion .swiper-prev',
-    nextEl: 'promotion .swiper-next'
+  navigation:{/*요소 선택할 수 있게 정보 입력*/ 
+    prevEl: '.promotion .swiper-prev',
+    nextEl: '.promotion .swiper-next'
   }
+})
+ 
+
+const promotionEl = document.querySelector('.promotion');
+const promotionToggleBtn =document.querySelector('.toggle-promotion');
+let isHidePromotion = false;
+promotionToggleBtn.addEventListener('click', function(){
+  isHidePromotion = !isHidePromotion
+   if(isHidePromotion){ //숨김
+    promotionEl.classList.add('hide');
+   }else{ //보임
+    promotionEl.classList.remove('hide');
+   }
 })
