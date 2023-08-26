@@ -575,6 +575,7 @@ align-items: center;
   position: absolute;
   top: 0;
   left: 0;
+<<<<<<< HEAD
 }
 .youtube .inner{
   height: 700px;
@@ -880,4 +881,6 @@ footer .logo {
   display: flex;
   justify-content: center;
   align-items: center;
+=======
+>>>>>>> f424298c4240226be08088bbba5887fdc9766bff
 }

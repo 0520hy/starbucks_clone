@@ -87,8 +87,8 @@ new Swiper('.promotion .swiper-container',{
     prevEl: '.promotion .swiper-prev',
     nextEl: '.promotion .swiper-next'
   }
-})
- 
+})  
+
 new Swiper('.awards .swiper-container', {
   // direction: 'horizontal', // 수평 슬라이드
   autoplay: true, // 자동 재생 여부
@@ -151,3 +151,15 @@ spyEls.forEach(function (spyEl) {
 /*현재연도 계산*/ 
 const thisYear = document.querySelector('.this-year')
 thisYear.textContent = new Date().getFullYear()
+
+const promotionEl = document.querySelector('.promotion');
+const promotionToggleBtn =document.querySelector('.toggle-promotion');
+let isHidePromotion = false;
+promotionToggleBtn.addEventListener('click', function(){
+  isHidePromotion = !isHidePromotion
+   if(isHidePromotion){ //숨김
+    promotionEl.classList.add('hide');
+   }else{ //보임
+    promotionEl.classList.remove('hide');
+   }
+})
