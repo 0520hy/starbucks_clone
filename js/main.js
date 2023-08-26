@@ -152,14 +152,3 @@ spyEls.forEach(function (spyEl) {
 const thisYear = document.querySelector('.this-year')
 thisYear.textContent = new Date().getFullYear()
 
-const promotionEl = document.querySelector('.promotion');
-const promotionToggleBtn =document.querySelector('.toggle-promotion');
-let isHidePromotion = false;
-promotionToggleBtn.addEventListener('click', function(){
-  isHidePromotion = !isHidePromotion
-   if(isHidePromotion){ //숨김
-    promotionEl.classList.add('hide');
-   }else{ //보임
-    promotionEl.classList.remove('hide');
-   }
-})
